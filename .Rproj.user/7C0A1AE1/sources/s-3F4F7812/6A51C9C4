@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1601765763608.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1391662742",
+    "id" : "6A51C9C4",
+    "lastKnownWriteTime" : 1601773828,
+    "last_content_update" : 1601773828628,
+    "path" : "C:/Projects/film_analysis/scripts/data_exploration.R",
+    "project_path" : "scripts/data_exploration.R",
+    "properties" : {
+        "cursorPosition" : "8,200",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
