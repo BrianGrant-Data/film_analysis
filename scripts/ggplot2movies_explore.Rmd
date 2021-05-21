@@ -1,0 +1,70 @@
+---
+title: "ggplot2movies exploration"
+output: html_document
+---
+
+See [ggplot2movies.pdf](https://cran.r-project.org/web/packages/ggplot2movies/ggplot2movies.pdf) for details on the ggplot2movies package
+
+# Goal
+
+I'd like to see what insights this data set can give into movie profit. For example:
+  How due different genre's profits compare 
+  How does rating correlate with profit
+  What are the trends in rating or votes over the course of time and/or genre 
+  
+## Note
+Here are some of the types of analysis I might want to do here:
+
+- Descriptive analysis (to summarize the data set)  
+- Exploratory analysis (to identify relationships not causes)  
+- Inferential analysis  
+- Predictive analysis  
+- Causal analysis
+- Mechanistic analysis
+
+# Prepare Environment
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+if (!require("pacman")) install.packages("pacman")
+```
+
+```{r}
+pacman::p_load(ggplot2movies, dplyr)
+movies <- ggplot2movies::movies
+```
+
+# Describe the Data
+
+# Data Cleaning
+
+# Explore the Data
+```{r, Genre Dataframes}
+
+movies_action <- movies %>% 
+  filter(movies$Action == 1) %>% 
+  select(title, year, length, budget, rating, votes)
+
+movies_animation <- movies %>% 
+  filter(movies$Animation == 1) %>% 
+  select(title, year, length, budget, rating, votes) 
+
+movies_comedy <- movies %>% 
+  filter(movies$Comedy == 1) %>% 
+  select(title, year, length, budget, rating, votes) 
+
+movies_drama <- movies %>% 
+  filter(movies$Drama == 1) %>% 
+  select(title, year, length, budget, rating, votes)
+
+movies_documentary <- movies %>% 
+  filter(movies$Documentary == 1) %>% 
+  select(title, year, length, budget, rating, votes) 
+
+movies_romance <- movies %>% 
+  filter(movies$Romance == 1) %>% 
+  select(title, year, length, budget, rating, votes) 
+
+movies_short <- movies %>% 
+  filter(movies$Short == 1) %>% 
+  select(title, year, length, budget, rating, votes)
+```
